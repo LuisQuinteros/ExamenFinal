@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="mystyle.css">
     <title>Examen Final</title>
 </head>
 <body>
@@ -34,10 +35,10 @@
     </nav>
     <div class="contaner">
         <div class="div text-center">
-            <h1>Bienvenidos a la Empresa ABC</h1>
+            <h1 class="h1index">Bienvenidos a la Empresa ABC</h1>
         </div>
-        <div class="div">
-            <button >Presione</button>
+        <div class="div text-center">
+            <button class="btn-outline-primary" onclick="Saludar()">Presione</button>
             
         </div>
         <div class="div">
@@ -45,5 +46,11 @@
         </div>
     </div>
 </body>
+
+<script>
+function Saludar() {
+    alert("Gracias por visitarnos");
+}
+</script>
 </html>
 
