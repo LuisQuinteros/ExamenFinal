@@ -1,0 +1,155 @@
+md "labs" -->para crear carpeta
+
+cd --> entrar a carpeta
+
+ng new "lad" -->crear pagina
+ponemos si
+
+seleccionar la opcion de scss
+
+
+dir -->listar todo dentro de la carpeta
+
+ng serve -->arrancar el server
+
+
+localhost 4200  
+
+appp componene.html     borrar todo y guardar
+ 
+ng build  --> empaquetar 
+
+ng generate component about -->  crear un componenet
+
+const routes: Routes = [
+  {path:'',component:AppComponent},
+  {path:'about',component:AboutComponent},
+  {path:'services',component:ServicesComponent},
+  {path:'contacts',component:ServicesComponent}
+
+]; -->para llamar a los componentes y mostrarlo en los layaut
+
+
+    <router-outlet> 
+      
+    </router-outlet>  ---->  par visualizar los componentes
+
+
+
+ng g m panel --module app --route panel    ---> crear panel y sus rutas
+
+
+----RUTAS---
+
+const routes: Routes = [
+
+  {path:'', redirectTo:'website', pathMatch:'full'},
+
+  {
+    path:'',
+    component:LayoutwebsiteComponent,
+    children:[
+      { 
+        path: 'website', loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule) 
+      
+      }]
+  },
+  {
+    path:'',
+    component:LayoutloginComponent,
+    children:[
+      { 
+        path: 'login', loadChildren: () => import('./login/login.module').then(m => m.LoginModule),
+      
+      }]
+  },
+  {
+    path:'',
+    component:LayoutpanelComponent,
+    children:[
+      { 
+        path: 'panel', loadChildren: () => import('./panel/panel.module').then(m => m.PanelModule),
+      
+      }]
+  },
+
+];
+
+
+
+https://jsonplaceholder.typicode.com/
+
+
+
+export const environment=
+{
+    baseURL:'https://jsonplaceholder.typicode.com/'
+}
+
+
+
+
+
+
+
+
+
+
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from 'src/environments/environment';
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PostserviceService {
+
+  url:any;
+  constructor(private http:HttpClient)
+  { 
+    this.url = environment.baseURL;
+  }
+
+  listarPosts()
+  {
+    return this.http.get(this.url+ "/posts");
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------
+
+composer create-project laravel/laravel blog    --->para crear un proyecto
+
+php artisan serve ------>para hacer correr el serve
+
+
+php artisan make:migration create_posts_table  ---->crear migraciion
+
+php artisan make:model Post
+
+protected $table = 'posts';
+
+    protected $fillable = ['titulo'];
+
+php artisan make:controller PhotoController --resource
+
+postman
