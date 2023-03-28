@@ -1,2 +1,2 @@
 #        Grupo Nº 6 
-# Integrantes :
+# Integrantes : Luis Quinteros
