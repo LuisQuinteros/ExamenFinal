@@ -1,13 +1,21 @@
-
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
-<h1 style="text-align: center;">Contactos</h1>
-<div>
-    <p style="border: ridge #0f0fef 1px;">ABC Av. Pairumani Km1 telefono 4445954, Calle Num 45</p>
-</div>
-<div>
-    <input id="btn" class="text-center" type="button" onclick="mensaje();" value="contacto"/>
-</div>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="mystyle.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Contactos</h1>
+    <div>
+        <p style="border: ridge #0f0fef 1px; border-radius: 10px;">ABC Av. Pairumani Km1 telefono 4445954, Calle Num 45</p>
+    </div>
+    <div>
+        <input id="btn" class="btn btn-primary" type="button" onclick="mensaje();" value="contacto"/>
+    </div>
 <style>
     p{ 
         width: 200px;
@@ -15,11 +23,14 @@
     div{
         display: flex;
         justify-content: center;
+        
     }
 </style>
+</body>
 <script>
     function mensaje(){
         alert("vico@gmail.com");
     }
     mensaje();
 </script>
+</html>
